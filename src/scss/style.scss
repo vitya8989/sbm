@@ -1,0 +1,69 @@
+@import "null";
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+
+html {
+	scroll-behavior: smooth;
+	font-size: 10px;
+}
+body {
+	font-family: FuturaPT, sans-serif;
+	font-weight: 400;
+	background: #ffffff;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	&.this--overflow {
+		overflow: hidden;
+	}
+	-webkit-tap-highlight-color: transparent;
+}
+.container {
+	max-width: 1560px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	@media ($tablet) {
+		padding: 0 20px;
+	}
+}
+main {
+	background: #ffffff;
+}
+
+@import "blocks/title";
+@import "blocks/btn";
+@import "blocks/star_slider";
+@import "blocks/news_card";
+@import "blocks/breadcrumbs";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+
+@import "../components/main/main_top/main_top";
+@import "../components/main/main_products/main_products";
+@import "../components/main/main_factory/main_factory";
+@import "../components/main/main_map/main_map";
+@import "../components/main/main_chess/main_chess";
+
+@import "../components/products_page/products_page";
+
+@import "../components/products_detail/products_detail";
+
+@import "../components/factory/factory_top/factory_top";
+@import "../components/factory/factory_chess/factory_chess";
+
+@import "../components/news_detail/news_detail";
+
+@import "../components/calculate/calculate";
+
+@import "../components/calculate_thanks/calculate_thanks";

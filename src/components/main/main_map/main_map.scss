@@ -1,0 +1,117 @@
+.main_map {
+  border-radius: 30px 30px 0 0;
+  background: #2C2C2C;
+  margin-top: -30px;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+
+  @media($tablet) {
+    border-radius: 15px 15px 0 0;
+  }
+}
+.main_map__content {
+  padding: 178px 0 121px;
+  position: relative;
+
+  @media($tablet) {
+    padding: 32px 0 106px;
+  }
+}
+.main_map__title {
+  text-align: center;
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+}
+.main_map__address {
+  position: absolute;
+  color: #3C9;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  left: 633px;
+  bottom: 407px;
+
+  @media($desktop) {
+    left: 540px;
+  }
+  @media($tablet) {
+    position: static;
+    margin-top: 300px;
+  }
+  @media($tablet3) {
+    margin-top: 205px;
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+}
+.main_map__img_wr {
+  width: 431px;
+  position: relative;
+  z-index: 2;
+  margin-top: 368px;
+
+  @media ($desktopBig) {
+    margin-top: 378px;
+  }
+  @media($tablet) {
+    margin-top: 16px;
+  }
+  @media($tablet3) {
+    width: auto;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 552px;
+    height: 1px;
+    background: #3C9;
+
+    @media($desktop) {
+      width: 467px;
+    }
+    @media($tablet) {
+      display: none;
+    }
+  }
+}
+.main_map__img {
+  padding-top: 72.6218%;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+.main_map__map {
+  position: absolute;
+  top: 0;
+  left: 185px;
+  width: 1538px;
+
+  @media($desktop) {
+    left: 100px;
+  }
+  @media($tablet) {
+    width: 900px;
+  }
+  @media($tablet3) {
+    width: 786px;
+    left: 0;
+    top: -80px
+  }
+
+  img {
+    width: 100%;
+  }
+}

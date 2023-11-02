@@ -1,0 +1,156 @@
+.main_top {
+  position: relative;
+  z-index: 2;
+  background: radial-gradient(60.6% 59.4% at 64.31% 52.39%, #F4F4F3 0%, #33CB98 72.93%);
+  box-shadow: 0 -17px 20px 0 rgba(41, 174, 130, 0.47);
+  padding-top: 130px;
+
+  @media ($tablet) {
+    padding-top: 114px;
+    background: var(--cbm-gradient-1, radial-gradient(149.95% 158.26% at 72.92% 115.85%, #F4F4F3 0%, #3C9 71.3%));
+  }
+}
+.main_top__top {
+  padding: 91px 0 77px;
+  position: relative;
+
+  @media ($tablet) {
+    padding: 60px 0 100px;
+    min-height: calc(100vh - 112px);
+  }
+}
+.main_top__top_content {
+  max-width: 894px;
+}
+.main_top__top_title {
+  @media ($tablet3) {
+    font-size: 5rem;
+  }
+}
+.main_top__top_link {
+  margin-top: 40px;
+  width: max-content;
+}
+.main_top__top_btn {
+  position: absolute;
+  bottom: -18px;
+  left: calc(50% - 25px);
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  transition: background 0.25s;
+
+  @media ($tablet) {
+    bottom: 41px;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      background: rgba(255,255,255,0.25);
+    }
+  }
+}
+.main_top__body {
+  position: relative;
+  padding: 0 40px;
+  transition: padding 0.4s;
+  &.animate {
+   padding: 0;
+  }
+
+  @media ($tablet) {
+    padding: 0;
+  }
+}
+.main_top__body_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.9375);
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.4s, border-radius 0.4s;
+  object-fit: cover;
+  object-position: top;
+
+  .animate & {
+    transform: scale(1);
+    border-radius: 0;
+  }
+  @media ($tablet) {
+    transform: scale(1);
+  }
+}
+.main_top__body_content {
+  position: relative;
+  z-index: 2;
+  padding-top: 243px;
+
+  @media ($tablet) {
+    padding-top: 67px;
+  }
+}
+.main_top__body_title {
+  color: #FFF;
+
+  @media ($tablet3) {
+    font-size: 4rem;
+  }
+}
+.main_top__body_items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -60px;
+
+  @media ($tablet) {
+    margin-top: 60px;
+  }
+}
+.main_top__body_item {
+  position: relative;
+  transition: margin 0.4s;
+  &.this--left {
+    width: 483px;
+  }
+  &.this--center {
+    width: 688px;
+    margin: 0 -19.6% -11px;
+    z-index: 2;
+    @media ($desktopBig) {
+      margin: 0 -27% -11px;
+    }
+
+    .animate & {
+      margin: 0 -16% -11px;
+      @media ($desktopBig) {
+        margin: 0 -22% -11px;
+      }
+    }
+
+    @media ($tablet) {
+      margin: 0 -22% -11px;
+    }
+  }
+  &.this--right {
+    width: 483px;
+  }
+
+
+}
+.main_top__body_img {
+  padding-top: 111.6279%;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
