@@ -809,6 +809,10 @@ main {
   gap: 59px;
 }
 
+.footer__run_string_images img {
+  max-height: 42px;
+}
+
 .marquee {
   -webkit-animation: scroll 20s linear infinite;
           animation: scroll 20s linear infinite;
